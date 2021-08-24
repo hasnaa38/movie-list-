@@ -12,28 +12,27 @@ let movieList = JSON.parse(localStorage.getItem('listStorage'));
 
 //------> Constructor Function <------
 
-function MovieObject(name, category, year, image) {
+function MovieObject(name, category, year) {
   this.name = name;
   this.category = category;
   this.year = year;
-  this.image = image;
 
   movieList.push(this);
 }
 
-// MovieObject.prototype.imageGen = function() {
-//   this.image = `../img/${this.category}.png`;
-//   return this.image;
-// };
+//------> Generate Category Image <------
+MovieObject.prototype.imageGen = function(category) {
+  this.image = `./img/${this.category}.png`;
+  return this.image;
+};
 
 //------> Submitting Event <------
 document.addEventListener('submit', submittingFunction);
 function submittingFunction(event) {
   event.preventDefault();
   let movieCategory = event.target.category.value;
-  let categoryImage = `./img/${movieCategory}.png`;
 
-  new MovieObject(event.target.name.value, movieCategory, event.target.year.value, categoryImage);
+  new MovieObject(event.target.name.value, movieCategory, event.target.year.value);
   console.log(movieList);
   localStorage.setItem('listStorage', JSON.stringify(movieList));
   render();
@@ -55,7 +54,7 @@ function render() {
     let td2 = document.createElement('td');
     tableRow.appendChild(td2);
     let img = document.createElement('img');
-    img.src = movieList[i].image;
+    img.src = movieList[i].imageGen(movieList[i].category);
     td2.appendChild(img);
     let td3 = document.createElement('td');
     td3.textContent = movieList[i].name;
