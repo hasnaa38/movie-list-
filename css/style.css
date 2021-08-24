@@ -6,6 +6,7 @@ html {
     height: 100vh;
     width: 100vw;
     font-family: 'Roboto', sans-serif;
+    overflow-x: none;
 }
 
 header {
@@ -26,44 +27,30 @@ main {
     margin-top: 30px;
 }
 
+section {
+    height: fit-content;
+    min-height: 100vh;
+}
+
 /* --------------- Form Styling ----------------- */
 
 fieldset {
-    border:1px dashed #b3b3b3;
+    border: 2px dashed #b3b3b3;
+    border-radius: 8px;
     padding: 30px
 }
 
 legend {
-    padding: 0.2em 0.5em;
+    padding: 4px 5px;
     color: #b3b3b3;
     font-size: 14px;
     font-weight: bold;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-legend:before {
-    position: absolute;
-    content: '';
-    height: 8px;
-    border-left: 1px solid gray;
-    left: 0px;
-    top: 7px;
-}
-
-legend:after {
-    position: absolute;
-    content: '';
-    height: 8px;
-    border-right: 1px solid gray;
-    right: 0px;
-    top: 7px;
 }
 
 input[type=text], input[type=number], select {
     width: 100%;
-    padding: 8px 40px;
+    padding: 8px 60px 8px 8px;
     margin: 5px 0;
     display: block;
     border: 1px solid #ccc;
@@ -100,7 +87,7 @@ input[type=reset]:hover {
 /* --------------- Table Styling ----------------- */
 
 img {
-    width: 40px;
+    width: 42px;
     height: auto;
 }
 
@@ -121,6 +108,10 @@ tr {
     display: grid;
     grid-template-columns: 1fr 2fr 2.5fr 1.5fr;
     margin: 5px 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 18px;
+    padding: 28px 2px;
 }
 
 tr:nth-child(odd) {
@@ -131,8 +122,10 @@ tr:nth-child(even) {
     background-color: #77ACF1;
 }
   
-th, td {
-    padding: 15px;
+td {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* --------------- Footer Styling ----------------- */
@@ -145,7 +138,8 @@ footer {
     align-items: center;
     justify-content: center;
     color:  #E8F0F6;
-    position: absolute;
+    position: relative;
     bottom: 0;
+    margin-top: 30px;
 }
 

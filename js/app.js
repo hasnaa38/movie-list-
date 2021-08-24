@@ -67,6 +67,8 @@ document.addEventListener('reset', clearingFunction);
 function clearingFunction() {
   tableArea.textContent = '';
   localStorage.setItem('listStorage', JSON.stringify([]));
+  movieList = JSON.parse(localStorage.getItem('listStorage'));
+
 }
 
 //------> Removing One Movie <------
