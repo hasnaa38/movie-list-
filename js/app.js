@@ -5,6 +5,7 @@ let tableArea = document.getElementById('tableArea');
 //------> Local Storage <------
 if(localStorage.getItem('listStorage') === null) {
   localStorage.setItem('listStorage', JSON.stringify([]));
+  //If there was no local storage, create it
 }
 
 let movieList = JSON.parse(localStorage.getItem('listStorage'));
@@ -20,12 +21,17 @@ function MovieObject(name, category, year, image) {
   movieList.push(this);
 }
 
+// MovieObject.prototype.imageGen = function() {
+//   this.image = `../img/${this.category}.png`;
+//   return this.image;
+// };
+
 //------> Submitting Event <------
 document.addEventListener('submit', submittingFunction);
 function submittingFunction(event) {
   event.preventDefault();
   let movieCategory = event.target.category.value;
-  let categoryImage = `../img/${movieCategory}.png`;
+  let categoryImage = `./img/${movieCategory}.png`;
 
   new MovieObject(event.target.name.value, movieCategory, event.target.year.value, categoryImage);
   console.log(movieList);
