@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Movie List</h1>
+    </header>
+    <main>
+        <section id="formArea">
+            <form>
+                <fieldset>
+                    <legend>New Movie</legend>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required><br>
+                    <label for="category">Category</label>
+                    <select name="category" id="category" required>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="animation">Animation</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="detective">Detective</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="history">History</option>
+                        <option value="horror">Horror</option>
+                        <option value="musical">Musical</option>
+                        <option value="pirate">Pirate</option>
+                        <option value="romantic">Romantic</option>
+                        <option value="sci-fi">SCI-FI</option>
+                        <option value="war">War</option>
+                        <option value="western">Western</option>
+                    </select><br>
+                    <label for="year">Issue Year</label>
+                    <input type="number" name="year" id="year" max="2021" required><br><br>
+                    <input type="submit" value="submit">
+                    <input type="reset" value="clear">
+                </fieldset>
+            </form>
+        </section>
+        <section id="tableArea"></section>
+    </main>
+    <footer>
+        <p>All rights reserved 2021 &copy; ASAC</p>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>

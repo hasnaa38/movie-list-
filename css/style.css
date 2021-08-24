@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: #39A2DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  #E8F0F6;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+/* --------------- Form Styling ----------------- */
+
+fieldset {
+    border:1px dashed #b3b3b3;
+    padding: 30px
+}
+
+legend {
+    padding: 0.2em 0.5em;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+legend:before {
+    position: absolute;
+    content: '';
+    height: 8px;
+    border-left: 1px solid gray;
+    left: 0px;
+    top: 7px;
+}
+
+legend:after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    border-right: 1px solid gray;
+    right: 0px;
+    top: 7px;
+}
+
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: 8px 40px;
+    margin: 5px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+}
+  
+input[type=submit], input[type=reset] {
+    background-color: #71c7ec;
+    color: #E8F0F6;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+    text-transform: capitalize;
+}
+
+input[type=reset] {
+    background-color: #a10909;
+}
+  
+input[type=submit]:hover {
+    background-color: hsl(198, 76%, 58%);
+}
+
+input[type=reset]:hover {
+    background-color: hsl(0, 89%, 23%);
+}
+
+/* --------------- Table Styling ----------------- */
+
+img {
+    width: 40px;
+    height: auto;
+}
+
+.remove {
+    color:  #a10909;
+    cursor: pointer;
+}
+
+table {
+    width: 400px;
+}
+
+table, td {  
+    text-align: center;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2.5fr 1.5fr;
+    margin: 5px 0;
+}
+
+tr:nth-child(odd) {
+    background-color: #A2DBFA;
+}
+
+tr:nth-child(even) {
+    background-color: #77ACF1;
+}
+  
+th, td {
+    padding: 15px;
+}
+
+/* --------------- Footer Styling ----------------- */
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: #053742;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  #E8F0F6;
+    position: absolute;
+    bottom: 0;
+}
+
